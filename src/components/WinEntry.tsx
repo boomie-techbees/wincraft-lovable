@@ -96,17 +96,25 @@ export function WinEntry({ onSave }: WinEntryProps) {
       return;
     }
 
+    // Auto-add any pending tag before saving
+    const finalTags = [...tags];
+    const pendingTag = tagInput.trim().toLowerCase();
+    if (pendingTag && !finalTags.includes(pendingTag) && finalTags.length < 5) {
+      finalTags.push(pendingTag);
+    }
+
     setIsSaving(true);
     
     // Simulate a slight delay for feedback
     setTimeout(() => {
-      const success = onSave(content.trim(), tags);
+      const success = onSave(content.trim(), finalTags);
       setIsSaving(false);
       
       if (success) {
         setShowSuccess(true);
         setContent('');
         setTags([]);
+        setTagInput('');
         setSuggestions([]);
         
         setTimeout(() => setShowSuccess(false), 2000);
@@ -115,7 +123,7 @@ export function WinEntry({ onSave }: WinEntryProps) {
         toast.error('Failed to save. Please try again.');
       }
     }, 300);
-  }, [content, tags, onSave]);
+  }, [content, tags, tagInput, onSave]);
 
   return (
     <div className="space-y-6 animate-fade-in">
