@@ -8,6 +8,7 @@ import Wins from "./pages/Wins";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import { BottomNav } from "./components/BottomNav";
+import { TopNav } from "./components/TopNav";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <TopNav />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/wins" element={<Wins />} />
