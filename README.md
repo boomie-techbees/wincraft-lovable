@@ -1,3 +1,5 @@
+⚠️ This is an archived snapshot built with Lovable as part of an AI tool comparison. Not actively maintained.
+
 # Welcome to your Lovable project
 
 ## Project info
