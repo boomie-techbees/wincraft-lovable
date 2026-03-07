@@ -1,4 +1,4 @@
-⚠️ This is an archived snapshot built with Lovable as part of an AI tool comparison. Not actively maintained.
+⚠️ This is an archived snapshot built with Lovable as part of an AI tool comparison. Not actively maintained. Everything below this point is the README unedited from Lovable.
 
 # Welcome to your Lovable project
 
