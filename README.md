@@ -56,11 +56,17 @@ npm run dev
 
 This project is built with:
 
+**Frontend:**
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+
+**Backend (via Lovable Cloud):**
+- Supabase (PostgreSQL database, authentication, storage)
+- Supabase Edge Functions (Deno-based serverless functions)
+- Lovable AI Gateway (AI-powered content generation)
 
 ## How can I deploy this project?
 
